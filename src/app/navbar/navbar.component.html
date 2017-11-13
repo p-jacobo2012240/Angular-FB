@@ -1,0 +1,33 @@
+<nav class="navbar fixed-top navbar-toggleable-md navbar navbar-inverse bg-inverse" style="background-color: #333;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Quiniela Chapina</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" routerLinkActive="Active">
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="Active">
+        <a class="nav-link" [routerLink]="['login']">Login</a>
+      </li>
+    </ul>
+    <div class="col-md-2">
+       <div class="navbar navbar-inverse" role="banner">
+           <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+             <ul class="nav navbar-nav">
+               <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi cuenta <b class="caret"></b></a>
+                 <ul class="dropdown-menu animated fadeInUp">
+                   <li><a href="profile.html">Perfil</a></li>
+                   <li><a href="login.html">Salir</a></li>
+                 </ul>
+               </li>
+             </ul>
+           </nav>
+       </div>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
