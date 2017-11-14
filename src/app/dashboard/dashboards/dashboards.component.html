@@ -1,0 +1,35 @@
+<form #dashboardForm="ngForm" (ngSubmit)="onSubmit(dashboardForm)">
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="dashboardService.selectedDashboard.$key">
+    <div class="form-group">
+      <label>Equipo A</label>
+      <input class="form-control" name="equipoa" #equipoa="ngModel" [(ngModel)]="dashboardService.selectedDashboard.equipoa" placeholder="Equipo A" required>
+    </div>
+    <div class="form-group">
+        <label>Equipo B</label>
+        <input class="form-control" name="equipob" #equipob="ngModel" [(ngModel)]="dashboardService.selectedDashboard.equipob" placeholder="Equipo B" required>
+    </div>
+    <div class="form-group">
+        <label>Maarcador A</label>
+        <input class="form-control" name="marcadora" #marcadora="ngModel" [(ngModel)]="dashboardService.selectedDashboard.marcadora" placeholder="Marcador A" required>
+    </div>
+    <div class="form-group">
+        <label>Maarcador B</label>
+        <input class="form-control" name="marcadorb" #marcadorb="ngModel" [(ngModel)]="dashboardService.selectedDashboard.marcadorb" placeholder="Marcador B" required>
+    </div>
+    <div class="form-group">
+        <label>Fecha</label>
+        <input class="form-control" name="fecha" #fecha="ngModel" [(ngModel)]="dashboardService.selectedDashboard.fecha" placeholder="Fecha" required>
+    </div>
+    <div class="form-group">
+        <label>Tokens</label>
+        <input class="form-control" name="tokens" #tokens="ngModel" [(ngModel)]="dashboardService.selectedDashboard.tokens" placeholder="Asig Token" required>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default" [disabled]="!dashboardForm.valid">
+         <i class="fa fa-floppy-o"></i>Aceptar</button> 
+        <button type="button" class="btn btn-default" *ngIf="dashboardService.selectedDashboard.$key!=null" (click)="onDelete(dashboardForm)">
+            <i class="fa fa-trash"></i>Elimiar</button>
+        <button type="button" class="btn btn-default" (click)="resetForm(dashboardForm)">
+            <i class="fa fa-repeat"></i> Actualizar</button>
+      </div>
+</form>
