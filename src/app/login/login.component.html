@@ -1,13 +1,13 @@
-<form (submit)="loginUser($event)">
-	<div class="input">
-		<label>Username</label>
-		<input type="text">
+<form (ngSubmit)="loginUser($event)">
+	<div class="form-group">
+		<label for="email">Correo</label> <input type="text"
+			class="form-control" id="email" name="email">
 	</div>
-	<div class="input">
-		<label>Password</label>
-		<input type="password">
+
+	<div class="form-group">
+		<label for="password">Contraseña</label> <input type="password"
+			class="form-control" id="password" name="password" >
 	</div>
-	<div class="input">
-		<input type="submit" value="Login">
-	</div>
+
+	<button type="submit" class="btn btn-success">Acceder</button>
 </form>

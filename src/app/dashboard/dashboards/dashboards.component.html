@@ -1,6 +1,10 @@
 <form #dashboardForm="ngForm" (ngSubmit)="onSubmit(dashboardForm)">
     <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="dashboardService.selectedDashboard.$key">
     <div class="form-group">
+        <!--select ng-model="equipoa" ng-options="">
+            <option value="1">Real</option>
+            <option value="2">Barsa</option>
+        </select-->
       <label>Equipo A</label>
       <input class="form-control" name="equipoa" #equipoa="ngModel" [(ngModel)]="dashboardService.selectedDashboard.equipoa" placeholder="Equipo A" required>
     </div>
