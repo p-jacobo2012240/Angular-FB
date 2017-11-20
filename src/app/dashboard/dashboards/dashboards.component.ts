@@ -10,12 +10,28 @@ import { DashboardService} from '../shared/dashboard.service';
 })
 export class DashboardsComponent implements OnInit {
 
+  myHeaders: { [name: string]: any } = {
+    'Authorization': 'MyToken',
+    'Another Header': 'AnotherValue'
+  };
+
+  images = [];
+
+
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.resetForm();
+    setTimeout(()=>{  ///desde aqui
+      this.images = [
+        'https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png',
+        'https://pbs.twimg.com/profile_images/855073776215654400/oGEOJ2JU.jpg',
+        {fileName: 'google-image.jpg', url: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+      ];
+    }, 1000);// hasta aqui
   }
 
+  
   onSubmit(form: NgForm){
     if(form.value.$key == null)
     this.dashboardService.insertDashboard(form.value);

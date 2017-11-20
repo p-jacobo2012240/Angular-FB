@@ -27,6 +27,7 @@ import { SocialogComponent } from './socialog/socialog.component';
 //LOGUEO POR FACEBOOK Y GOOGLE
 import { SocialLoginModule } from "angular4-social-login";
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular4-social-login';
+import { ImageUploadModule } from "angular2-image-upload";
 
 const appRoutes:Routes = [
  
@@ -79,7 +80,8 @@ export function provideConfig (){
     AppRoutingModule,
     BrowserModule,
     AngularFireAuthModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ImageUploadModule.forRoot(),
   ],
   providers: [
    {
