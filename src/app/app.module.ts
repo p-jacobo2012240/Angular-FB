@@ -24,7 +24,7 @@ import { UserLoginComponent } from './reg/user-login/user-login.component';
 import { HttpModule } from '@angular/http';
 import {AuthService} from './reg/auth.service';
 import { SocialogComponent } from './socialog/socialog.component';
-
+//LOGUEO POR FACEBOOK Y GOOGLE
 import { SocialLoginModule } from "angular4-social-login";
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular4-social-login';
 
@@ -67,6 +67,7 @@ export function provideConfig (){
     UserInfoComponent,
     UserLoginComponent,
     SocialogComponent
+    
 
     
   ],
