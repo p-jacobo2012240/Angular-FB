@@ -28,6 +28,9 @@ import { SocialogComponent } from './socialog/socialog.component';
 import { SocialLoginModule } from "angular4-social-login";
 import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular4-social-login';
 import { ImageUploadModule } from "angular2-image-upload";
+import { UserloguedComponent } from './userlogued/userlogued.component';
+import { LoguedsComponent } from './userlogued/logueds/logueds.component';
+import { LoguedListComponent} from './userlogued/logued-list/logued-list.component';
 
 const appRoutes:Routes = [
  
@@ -36,8 +39,9 @@ const appRoutes:Routes = [
     { path: 'dashboard', component: DashboardComponent,  canActivate: [AuthguardGuard]},
     { path: 'reg', component: RegComponent},
     { path: 'socialog', component: SocialogComponent},
+    { path: 'userlogued', component: UserloguedComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
-  
+    ///Añadir la vista en donde se va a redirigir a la vista donde estara oteniendo los dos componentes
 ]
 let config = new AuthServiceConfig([
   {
@@ -67,7 +71,10 @@ export function provideConfig (){
     RegComponent,
     UserInfoComponent,
     UserLoginComponent,
-    SocialogComponent
+    SocialogComponent,
+    UserloguedComponent,
+    LoguedsComponent,
+    LoguedListComponent
     
 
     
